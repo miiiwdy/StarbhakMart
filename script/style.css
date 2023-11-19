@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Montserrat:wght@100;200;300;400;500;600;700;900&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  background: linear-gradient(45deg, #354ce3, #6369ff);
+  background-size: 400% 400%;
+  border-radius: 1px;
+  animation: gradientAnimation 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.container header {
+  margin-left: 25px;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 5px 0;
+}
+.kotak {
+  height: 80vh;
+  background-color: #f3f3f3;
+  display: flex;
+  gap: 10px;
+  box-shadow: 0px -5px 25px rgb(255, 255, 255, 2);
+}
+
+.kiri {
+  display: flex;
+  flex-direction: column;
+}
+
+.kiri button {
+  margin: 0.5em 10px 0.5em 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  background-color: #354ce3;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
+}
+
+.satu {
+  margin: 0.5em 10px 0.5em 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #354ce3;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
+}
+
+.satu option {
+  padding: 10px;
+  background-color: white;
+  color: black;
+}
+
+.dua {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.belanja {
+  margin-left: 5px;
+  height: 60vh;
+  border: 1px solid #aaa;
+  width: 390px;
+  overflow-y: scroll;
+  padding: 5px;
+  border-radius: 28px;
+}
+
+.belanja .barang {
+  margin-bottom: 3px;
+  border: 1px solid #aaa;
+  display: flex;
+  background-color: #efeeee;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 28px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.barang .normal {
+  font-size: smaller;
+}
+
+.barang img {
+  max-width: 20px;
+}
+
+.barang button {
+  padding: 0;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
+
+.barang button span {
+  font-size: 30px;
+}
+
+.jajan {
+  padding: 0.5em 1em 0 1em;
+  color: black;
+  font-size: 12px;
+  background-color: #f3f3f3;
+  margin: 6px;
+  width: 100%;
+}
+
+.pay {
+  font-size: 12px;
+  background-color: #354ce3;
+  padding: 5px;
+  color: #f3f3f3 !important;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
+}
+
+.pricc {
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0.5px;
+  color: rgb(0, 0, 0) !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.kanan {
+  width: 1200px;
+  margin-right: 5px;
+}
+
+.kanan nav {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0);
+  align-items: center;
+}
+
+.kanan nav .nav_kanan span {
+  font-size: 27px;
+}
+
+.kanan nav .nav_kanan {
+  display: flex;
+  align-items: center;
+}
+
+.kanan nav .nav_kanan input {
+  padding: 5px;
+}
+
+#sortByName,
+#searchIcon {
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#sortByName:hover,
+#searchIcon:hover {
+  border-bottom: 1px #354ce3;
+  color: #26a5ff;
+  transform: scale(1.1);
+}
+
+.kanan section {
+  border: 1px solid #aaa;
+  height: 67vh;
+  overflow-y: scroll;
+  border-radius: 34px;
+}
+
+.kanan section .isi .foto img {
+  width: 92%;
+  margin: 5px;
+  height: 14vh;
+  border: 1px solid #bbb;
+  border-radius: 20px;
+}
+
+.kanan section .isi {
+  margin: 13px;
+  width: 115px;
+  height: 142px;
+  text-align: center;
+  float: left;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+  border-radius: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.kanan section .isi p {
+  font-size: 12px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-family: Georgia, "Merriweather", Times, serif;
+  color: rgb(77, 71, 71);
+}
+
+.kanan section .isi h1 {
+  font-size: 15px;
+  width: 100%;
+  padding-top: 2px;
+  font-family: "Times New Roman", serif;
+  color: rgb(142, 142, 142);
+}
+
+.kanan section .isi .add_icon {
+  position: relative;
+}
+.kanan section .isi .add_icon2 {
+  position: relative;
+}
+.iconplus {
+  position: absolute;
+  left: 12px;
+  width: 20px;
+  height: auto;
+}
+#iconminus {
+  display: none;
+  position: absolute;
+  left: -94px;
+  width: 20px;
+  height: auto;
+}
+.isi.hovered {
+  transform: translateY(2px);
+  box-shadow: 0px 3px 20px rgba(53, 76, 227, 1);
+}
+.payment {
+  height: 8vh;
+  background-color: #f3f3f3;
+  position: relative;
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 1);
+}
+
+.payment button {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  padding: 10px 2%;
+  gap: 10px;
+  outline: none;
+  border: none;
+  background: #354ce3;
+  color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  display: flex;
+  align-items: center;
+  border-radius: 35px;
+  transition: transform 0.6s ease;
+}
+.payment button:hover {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
+  transform: scale(0.9);
+  transition: transform 0.6s ease;
+}
+
+.container footer {
+  color: #f3f3f3;
+  padding-left: 10px;
+  padding-top: 0.8px;
+  font-size: small;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+section::-webkit-scrollbar {
+  display: none;
+}
+
+.belanja::-webkit-scrollbar {
+  display: none;
+}
+
+@media print {
+  body {
+    visibility: hidden;
+  }
+  #section-to-print {
+    visibility: visible;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}

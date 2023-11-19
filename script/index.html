@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbhak</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Starbhak Mart</h1>
+        </header>
+
+        <div class="kotak">
+            <div class="kiri" id="section-to-print">
+                <select class="satu">
+                    <option hidden>Pilih Jenis Pemesanan</option>
+                    <option>Take Away</option>
+                    <option>Delivery</option>
+                </select>
+                <button class="dua"><span class="material-symbols-outlined"
+                        style="color: rgb(255, 255, 255) !important; font-size: 16px; ">
+                        face
+                    </span>Mang.Jay</button>
+
+                    <div class="belanja">
+                        <div class="barang" style="display: none;"> 
+                            <div class="detail-kiri">
+                                <p id="nama-barang" style="font-size: small; font-weight: 500;"><span class="stock" id="stok-${itemName}"></span></p>
+                                <p class="normal">Harga: <span id="harga-banyak"></span></p>
+                            </div>
+                            <button id="remove">
+                                <span class="material-symbols-outlined" id="hapus">
+                                    delete
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                <div class="jajan" id="section-to-print">
+                    <p>Diskon : </p>
+                    <div class="pricc">
+                    <p>Harga : </p>
+                        <p id="totalPrice">0</p>
+                    </div>
+                    <p style="display: flex; justify-content: space-between;">Pajak : <span id="taxDiscount">0</span></p>
+                    <div class="pay">
+                    <p>Total Harga : </p>
+                        <p id="totalAmount">0</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="kanan">
+                <nav>
+                    <div class="nav_kiri">
+                        <p>Item List</p>
+                    </div>
+                    <div class="nav_kanan">
+                        <div class="cari"> 
+                            <span class="material-symbols-outlined" id="searchIcon">
+                                search
+                            </span>
+                            <input type="text" id="searchInput" placeholder="search" style="display: none;">
+                        </div>
+                        <span class="material-symbols-outlined">
+                            more_vert
+                        </span>
+                        <span class="material-symbols-outlined" id="sortByName">
+                            swap_vert
+                            </span>
+                    </div>
+                </nav>
+                <section>
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="assets/sushi.jpg" alt="">
+                        </div>
+                        <p>sushi</p>
+                        <h1>Rp. 3.000
+                            <span class="add_icon"><img src="assets/plus.png" alt="" class="iconplus"></span>
+                            <span class="add_icon2"><img src="assets/minus.png" alt="" id="iconminus""></span>
+                        </h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="assets/nasigoreng.jpg" alt="">
+                        </div>
+                        <p>nasi goreng</p>
+                        <h1>Rp. 15.000
+                            <span class="add_icon"><img src="assets/plus.png" alt="" class="iconplus"></span>
+                            <span class="add_icon2"><img src="assets/minus.png" alt="" id="iconminus""></span>
+                        </h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="assets/eggsandwich.jpg" alt="">
+                        </div>
+                        <p>egg sandwich</p>
+                        <h1>Rp. 5.000
+                            <span class="add_icon"><img src="assets/plus.png" alt="" class="iconplus"></span>
+                            <span class="add_icon2"><img src="assets/minus.png" alt="" id="iconminus""></span>
+                        </h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="assets/siomay.jpg" alt="">
+                        </div>
+                        <p>siomay</p>
+                        <h1>Rp. 15.000
+                            <span class="add_icon"><img src="assets/plus.png" alt="" class="iconplus"></span>
+                            <span class="add_icon2"><img src="assets/minus.png" alt="" id="iconminus""></span>
+                        </h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="assets/cireng.jpg" alt="">
+                        </div>
+                        <p>cireng</p>
+                        <h1>Rp. 2.000
+                            <span class="add_icon"><img src="assets/plus.png" alt="" class="iconplus"></span>
+                            <span class="add_icon2"><img src="assets/minus.png" alt="" id="iconminus""></span>
+                        </h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="assets/kentang.jpg" alt="">
+                        </div>
+                        <p>kentang</p>
+                        <h1>Rp. 15.000
+                            <span class="add_icon"><img src="assets/plus.png" alt="" class="iconplus"></span>
+                            <span class="add_icon2"><img src="assets/minus.png" id="iconminus""></span>
+                        </h1>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="payment">
+            <Button id="bayar">
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                    </span>
+                <span>
+                    <p>Payment</p>
+                    <p>(CTRL + P)</p>
+                </span>
+            </Button>
+        </div>
+    <footer>
+        <p>Ready</p>
+    </footer>
+
+</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</html>
