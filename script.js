@@ -172,7 +172,6 @@ $(document).ready(function () {
 });
 
   $("#bayar").click(function () {
-    var kiriID = $(".kiri").attr("id");
     window.print();
   });
 

@@ -2,8 +2,8 @@
 
 TODO::
 
--rombak pay button
-
+-rombak pay button 
+-tombol print ada di dalem pay button
 
 */
 
@@ -198,8 +198,8 @@ body {
 }
 .pay:hover {
   transform: scale(0.95);
-  box-shadow: 0 0 25px 0 #1a6fdc,0 20px 35px 0 rgba(0, 0, 0, 0.2);
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  box-shadow: 0 0 25px 0 #1a6fdc,0 20px 35px 0 rgba(0, 0, 0, 0.2);
 }
 
 .pricc1 {
@@ -306,7 +306,8 @@ body {
 
 .wadahItem.hovered {
   transform: scale(0.95);
-  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;  
+  box-shadow: 0px 12px 20px rgba(97, 135, 196, 0.8) !important;
 }
 
 .kanan section .wadahItem p {
