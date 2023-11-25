@@ -1,14 +1,4 @@
-/*
-
-TODO::
-
--rombak pay button 
--tombol print ada di dalem pay button
-
-*/
-
-
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Montserrat:wght@100;200;300;400;500;600;700;900&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
 *,
 html {
@@ -16,18 +6,28 @@ html {
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
-  background: linear-gradient(65deg, #d1fffc, #d1daff, #d1fffc, #d1daff,#d1fffc, #d1daff, #d1fffc, #d1daff,#d1fffc);
+  background: linear-gradient(
+    65deg,
+    #d1fffc,
+    #d1daff,
+    #d1fffc,
+    #d1daff,
+    #d1fffc,
+    #d1daff,
+    #d1fffc,
+    #d1daff,
+    #d1fffc
+  );
   background-size: 400% 400%;
   border-radius: 1px;
   animation: gradientAnimation 15s ease infinite;
   height: 100vh;
-  
+  overflow: hidden;
 }
 
 .container header {
@@ -45,36 +45,12 @@ body {
   gap: 10px;
   z-index: 1;
 }
-.tengah {
-  display: none;
-  width: 800px;
-  height:500px;
-  background-color: rgba(255, 255, 255, 0.895);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 35px;
-  transform: translate(-50%, -50%);
-  box-shadow: 2px 10px 28px rgba(0, 0, 0, 0.3);
-  z-index: 2;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 .kiri {
   display: flex;
   flex-direction: column;
   background-color: #fbfdff00;
+  width: 250px;
 }
 
 .kiri button {
@@ -102,7 +78,7 @@ body {
   font-weight: bold;
   font-size: 13px;
   border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(161,193,238,1);
+  box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .satu option {
@@ -116,21 +92,26 @@ body {
   display: flex;
   justify-content: center;
   gap: 1em;
-  box-shadow: 0px 4px 10px rgba(161,193,238,255);
+  box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .belanja {
   margin-left: 5px;
   height: 60vh;
-  width: 390px;
+  width: 255px;
   overflow-y: scroll;
   padding: 5px;
   background-color: #fbfdff;
   border-radius: 28px;
   box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.2);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
-  
+  transition: width 0.4s ease-in-out;
+}
+
+.belanja:hover {
+  width: 278px;
+  transition: width 0.4s ease-in-out !important;
 }
 
 .belanja .barang {
@@ -141,12 +122,12 @@ body {
   justify-content: space-around;
   align-items: center;
   border-radius: 13px;
-  box-shadow: 4px 5px 5px rgba(0,0,0,0.2);
+  box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.2);
   color: #5a6066;
 }
 
 .barang .normal {
-  font-size: 'smaller';
+  font-size: "smaller";
   color: #5a6066;
 }
 
@@ -170,6 +151,10 @@ body {
   font-weight: 600;
 }
 
+.detail-kiri p {
+  font-size: 13px;
+}
+
 .jajan {
   padding: 0.5em 1em 0 1em;
   color: black;
@@ -178,14 +163,16 @@ body {
   margin: 9px;
   margin-left: 6px;
   width: 99%;
-  height: 19%;
+  height: 23%;
+  padding-bottom: 8px;
   border-radius: 20px;
-  box-shadow: 4px 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .pay {
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 500;
   background-color: #1a6fdc;
   padding: 7px;
   color: #fbfdff !important;
@@ -199,7 +186,10 @@ body {
 .pay:hover {
   transform: scale(0.95);
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-  box-shadow: 0 0 25px 0 #1a6fdc,0 20px 35px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pay.shaker {
+  animation: shake 0.4s;
 }
 
 .pricc1 {
@@ -218,16 +208,25 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.pricc3 {
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0.5px;
+  color: rgb(0, 0, 0) !important;
+  display: flex;
+  justify-content: space-between;
+}
 
 .kanan {
-  width: 1200px;
+  width: 5000px;
   margin-right: 40px;
-  margin-left: 35px;;
+  margin-left: 35px;
 }
 
 .hidden {
   display: none;
 }
+
 .kanan nav {
   margin: 5px 0;
   display: flex;
@@ -257,6 +256,88 @@ body {
   padding: 5px;
 }
 
+.kanan section {
+  position: relative;
+  background-color: #fbfdff;
+  height: 80vh;
+  overflow-y: scroll;
+  border-radius: 37px;
+  box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.4);
+  margin-top: 30px;
+  bottom: 24px;
+}
+
+.kanan section .wadahItem .foto img {
+  width: 92%;
+  margin: 5px;
+  height: 14vh;
+  border-radius: 20px;
+}
+
+.kanan section .wadahItem {
+  margin: 10px;
+  margin-left: 29px;
+  margin-top: 17px;
+  width: 115px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0px 14px 15px rgba(97, 135, 196, 0.3);
+  float: left;
+  border-radius: 25px;
+  transition: transform 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.wadahItem.hovered {
+  transform: scale(0.95);
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
+  box-shadow: 0px 12px 20px rgba(97, 135, 196, 0.8) !important;
+}
+
+.kanan section .wadahItem p {
+  font-size: 12px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: rgb(77, 71, 71);
+}
+
+.kanan section .wadahItem h1 {
+  font-size: 15px;
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: rgb(142, 142, 142);
+}
+
+.kanan section .wadahItem .add_icon {
+  position: relative;
+}
+
+.kanan section .wadahItem .add_icon2 {
+  position: relative;
+}
+
+.iconplus {
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: auto;
+  margin-top: 8px;
+}
+
+#iconminus {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  left: -98px;
+  width: 20px;
+  height: auto;
+  margin-top: 8px;
+}
+
 #sortByName,
 #searchIcon,
 #optionIcon {
@@ -274,112 +355,9 @@ body {
   transform: scale(1.1);
 }
 
-.kanan section {
-  background-color: #fbfdff;
-  height: 70vh;
-  overflow-y: scroll;
-  border-radius: 37px;
-  box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.4);
-  margin-top: 30px;;
-}
-
-.kanan section .wadahItem .foto img {
-  width: 92%;
-  margin: 5px;
-  height: 14vh;
-  border-radius: 20px;
-}
-
-.kanan section .wadahItem {
-  margin: 10px;
-  margin-left: 29px;
-  margin-top: 1px;
-  width: 115px;
-  text-align: center;
-  color: #ffffff;
-  box-shadow: 0px 14px 15px rgba(97, 135, 196, 0.3);
-  float: left;
-  border-radius: 25px;
-  transition: transform 0.4s ease-in-out;
-  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.wadahItem.hovered {
-  transform: scale(0.95);
-  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;  
-  box-shadow: 0px 12px 20px rgba(97, 135, 196, 0.8) !important;
-}
-
-.kanan section .wadahItem p {
-  font-size: 12px;
-  margin-bottom: 5px;
-  font-weight: 500;
-  font-family: 'Poppins', sans-serif;
-  color: rgb(77, 71, 71);
-}
-
-.kanan section .wadahItem h1 {
-  font-size: 15px;
-  width: 100%;
-  margin-bottom: 10px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  color: rgb(142, 142, 142);
-}
-
-.kanan section .wadahItem .add_icon {
-  position: relative;
-}
-.kanan section .wadahItem .add_icon2 {
-  position: relative;
-}
-.iconplus {
-  cursor: pointer;
-  position: absolute;
-  left: 10px;
-  width: 20px;
-  height: auto;
-  margin-top: 8px;
-}
-#iconminus {
-  cursor: pointer;
-  display: none;
-  position: absolute;
-  left: -98px;
-  width: 20px;
-  height: auto;
-  margin-top: 8px;
-}
-.payment {
+.bawah {
   height: 8vh;
   position: relative;
-}
-
-.payment button {
-  cursor: pointer;
-  position: absolute;
-  margin-top: 30px;
-  margin-right: 20px;
-  right: 20px;
-  bottom: 10px;
-  padding: 10px 2%;
-  gap: 10px;
-  outline: none;
-  border: none;
-  background: #1a6fdc;
-  color: white;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  border-radius: 35px;
-  transition: transform 0.4s ease;
-  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-.payment button:hover {
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-  transform: scale(0.95);
-  transition: transform 0.4s ease;
-  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 .container footer {
@@ -388,17 +366,17 @@ body {
   padding-top: 0.8px;
   font-size: small;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
   display: none;
 }
 
-section::-webkit-scrollbar{
+section::-webkit-scrollbar {
   display: none;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -411,5 +389,63 @@ section::-webkit-scrollbar{
     position: relative;
     left: 0;
     top: 0;
+  }
+  .pay {
+    visibility: hidden;
+  }
+  .remove {
+    visibility: hidden;
+  }
+  .belanja .barang {
+    background-color: #e8effe00;
+    color: black;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
   }
 }

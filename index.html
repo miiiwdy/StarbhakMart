@@ -11,23 +11,18 @@
 
   <body>
     <div class="container">
-      <header>
+      <header>  
         <h1>Starbhak Mart</h1>
       </header>
 
       <div class="kotak">
-        <div class="kiri">
+        <div class="kiri" id="section-to-print">
           <select class="satu">
             <option hidden>Pilih Jenis Pemesanan</option>
             <option>Take Away</option>
             <option>Dine In</option>
           </select>
           <button class="dua">
-            <span
-              class="material-symbols-outlined"
-              style="color: rgb(255, 255, 255) !important; font-size: 16px">
-              face 
-            </span>
             <span id="rname"></span>
           </button>
 
@@ -56,21 +51,23 @@
             </div>
             <p style="display: flex; justify-content: space-between">
               Pajak : <span id="taxDiscount">0</span>
-            </p>
-          </div>
+              </p>  
+              <div class="pricc3">
+                <p>Total Harga :</p>
+                <p id="totalAmount">0</p>
+              </div>
+            </div>
           <div class="pay">
-            <p>Total Harga :</p>
-            <p id="totalAmount">0</p>
+            <span>
+              <p>Checkout</p>
+            </span>
           </div>
-          <div class="tengah" id="section-to-print">
-            <h1>total harga</h1>
-        </div>
         </div>
         <div class="kanan">
           <section>
             <nav>
               <div class="nav_kiri">
-                <p>Item List</p>
+                <p>Menu List</p>
               </div>
               <div class="nav_kanan">
                 <div class="cari">
@@ -88,7 +85,7 @@
                 <span class="material-symbols-outlined" id="sortByName"> swap_vert </span>
               </div>
             </nav>
-            <div class="wadahItem" data-qty="1">
+            <div class="wadahItem" data-item="1">
               <div class="foto">
                 <img src="assets/batagor.jpeg" alt="" />
               </div>
@@ -104,7 +101,7 @@
               </h1>
             </div>
 
-            <div class="wadahItem" data-qty="2">
+            <div class="wadahItem" data-item="2">
               <div class="foto">
                 <img src="assets/siomay.jpeg" alt="" />
               </div>
@@ -120,7 +117,7 @@
               </h1>
             </div>
 
-            <div class="wadahItem" data-qty="3">
+            <div class="wadahItem" data-item="3">
               <div class="foto">
                 <img src="assets/nasigoreng.jpeg" alt="" />
               </div>
@@ -136,7 +133,7 @@
               </h1>
             </div>
 
-            <div class="wadahItem" data-qty="4">
+            <div class="wadahItem" data-item="4">
               <div class="foto">
                 <img src="assets/nasiuduk.jpeg" alt="" />
               </div>
@@ -152,7 +149,7 @@
               </h1>
             </div>
 
-            <div class="wadahItem" data-qty="5">
+            <div class="wadahItem" data-item="5">
               <div class="foto">
                 <img src="assets/indomie.jpeg" alt="" />
               </div>
@@ -168,7 +165,7 @@
               </h1>
             </div>
 
-            <div class="wadahItem" data-qty="6">
+            <div class="wadahItem" data-item="6">
               <div class="foto">
                 <img src="assets/airmineral.jpeg" alt="" />
               </div>
@@ -183,7 +180,7 @@
                 /></span>
               </h1>
             </div>
-            <div class="wadahItem" data-qty="7">
+            <div class="wadahItem" data-item="7">
               <div class="foto">
                 <img src="assets/cocacola.jpeg" alt="" />
               </div>
@@ -198,7 +195,7 @@
                 /></span>
               </h1>
             </div>
-            <div class="wadahItem" data-qty="8">
+            <div class="wadahItem" data-item="8">
               <div class="foto">
                 <img src="assets/esteh.jpeg" alt="" />
               </div>
@@ -213,7 +210,7 @@
                 /></span>
               </h1>
             </div>
-            <div class="wadahItem" data-qty="9">
+            <div class="wadahItem" data-item="9">
               <div class="foto">
                 <img src="assets/jusjeruk.jpeg" alt="" />
               </div>
@@ -231,15 +228,8 @@
           </section>
         </div>
       </div>
-    <div class="payment">
-      <button id="bayar">
-        <span class="material-symbols-outlined"> shopping_cart </span>
-        <span>
-          <p>Payment</p>
-          <p>(CTRL + P)</p>
-        </span>
-      </button>
-    </div>
+
+    <div class="bawah"></div>
     <footer>
       <p>Ready</p>
     </footer>
