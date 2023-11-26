@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0"
+  }
+}
