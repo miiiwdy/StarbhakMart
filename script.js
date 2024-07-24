@@ -58,9 +58,16 @@ $(document).ready(function () {
 
   $("#searchInput").on("keyup", function () {
     var value = $(this).val().toLowerCase();
+    let text = $(".gaadaItem p");
     $(".wadahItem").filter(function () {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
     });
+    if ($(".wadahItem").filter(":visible").length === 0) {
+      text.show();
+    }
+    else {
+      text.hide();
+    }
   });
 
   $("#searchInput").on("focusout", function () {
@@ -274,4 +281,6 @@ $(document).ready(function () {
       window.print();
     }
   }
+  var aoaa = "ppp";
+  console.log(aoaa); 
 });

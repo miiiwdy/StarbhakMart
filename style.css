@@ -387,7 +387,7 @@ section::-webkit-scrollbar {
   #section-to-print {
     visibility: visible;
     position: relative;
-    left: 0;
+    left: 200px;
     top: 0;
   }
   .pay {
